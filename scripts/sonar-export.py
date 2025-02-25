@@ -5,9 +5,10 @@ from datetime import datetime, timedelta
 import os
 
 # SonarQube parameters
-SONARQUBE_URL = 'http://sonarqube:9000/api/issues/search' #Sonar Instance URL
-PROJECT_KEY = os.getenv("SONARQUBE_PROJECT_KEY")
-TOKEN = os.getenv("SONARQUBE_PROJECT_TOKEN")
+APP_PORT = os.getenv("APP_PORT")
+SONARQUBE_URL = 'http://app:'+APP_PORT+'/api/issues/search' #Sonar Instance URL
+PROJECT_KEY = os.getenv("PROJECT_KEY")
+TOKEN = os.getenv("PROJECT_TOKEN")
 
 # Validate user input for start_date
 def get_start_date():
